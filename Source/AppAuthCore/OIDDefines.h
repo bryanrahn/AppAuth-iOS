@@ -43,9 +43,4 @@
                                userInfo:nil]; \
 }
 
-#ifdef _APPAUTHTRACE
 #   define AppAuthRequestTrace(fmt, ...) NSLog(fmt, ##__VA_ARGS__);
-#else // _APPAUTHTRACE
-#   define AppAuthRequestTrace(...)
-#endif // _APPAUTHTRACE
-

@@ -47,7 +47,10 @@ let package = Package(
         .target(
             name: "AppAuthCore",
             path: "Source/AppAuthCore",
-            publicHeadersPath: ""
+            publicHeadersPath: "",
+	    swiftSettings: [
+               .define("_APPAUTHTRACE")
+            ]
         ),
         .target(
             name: "AppAuth",
@@ -59,6 +62,9 @@ let package = Package(
                 .headerSearchPath("iOS"),
                 .headerSearchPath("macOS"),
                 .headerSearchPath("macOS/LoopbackHTTPServer"),
+            ],
+	    swiftSettings: [
+               .define("_APPAUTHTRACE")
             ]
         ),
         .target(
